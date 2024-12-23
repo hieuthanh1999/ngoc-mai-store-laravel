@@ -57,7 +57,7 @@
 #sequence {
     position: relative;
     width: 100%;
-    height: 25vh;
+    height: 35vh;
     overflow: hidden;
 }
 
@@ -349,8 +349,6 @@ document.addEventListener('DOMContentLoaded', function () {
         </div>
     </div>
 </div>
-
-<div class="clearfix"></div>
 <div class="container_fullwidth">
     <div class="container">
         {{-- <div class="hot-products">
@@ -441,8 +439,12 @@ document.addEventListener('DOMContentLoaded', function () {
         </div>
     </div> --}}
 </div>
+<div class="container" style="margin-top: 25px;">
+    <div class="row">
+        <img src="{{ asset("asset/client/images/banner-new.jpg") }}">
+    </div>
+</div>
 
-<div class="clearfix"></div>
 <div class="container_fullwidth">
     <div class="container">
         <div class="clearfix"></div>
@@ -458,8 +460,9 @@ document.addEventListener('DOMContentLoaded', function () {
     </div>
 </div>
 
+
 <div class="clearfix"></div>
-<div class="container_fullwidth">
+<div class="container_fullwidth" style="margin: 0; padding: 5px 0">
     <div class="container">
         <div class="hot-products">
             <h3 class="title style-header-index">Sản Phẩm Bán Chạy</h3>
@@ -490,6 +493,10 @@ document.addEventListener('DOMContentLoaded', function () {
         </div>
     </div>
 </div>
-<div class="clearfix"></div>
 
+<div class="container" style="padding: 5px 0">
+    <div class="row">
+        <img src="{{ asset("asset/client/images/20180608085816-xedapthethao.jpg") }}">
+    </div>
+</div>
 @endsection

@@ -101,6 +101,13 @@
             z-index: 20;
             /* Đảm bảo phần này không bị che bởi các phần tử khác */
         }
+
+        .style-box {
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     </style>
     <div class="container_fullwidth">
         <div class="container">
@@ -170,23 +177,22 @@
                                             @endforeach
                                         </select>
                                     </div>
-                                    <div class="col-md-3 wided-box">
+                                    <div class="col-md-3 wided-box style-box">
                                         Kích thước &nbsp;&nbsp;:
                                         <select id="data-size" data-sizes="{{ json_encode($productSize) }}" name="id">
-
                                         </select>
                                     </div>
-                                    <div class="col-md-3 wided-box">
+                                    <div class="col-md-3 wided-box style-box">
                                         <div style="display: flex; align-items: center; height: 30px;">
                                             Số lượng còn &nbsp;&nbsp;: <span id="quantity_remain"
                                                 style="margin-left: 10px;"></span>
                                         </div>
                                     </div>
-                                    <div class="col-md-3 wided-box" style="display: flex">
+                                    <div class="col-md-3 wided-box style-box" style="display: flex">
                                         <div style="display: flex; align-items: center;">
                                             <span>Số lượng&nbsp;&nbsp;:</span>
                                         </div>
-                                        <div style="margin-left: 10px;">
+                                        <div style="margin-left: 10px; ">
                                             <input type="number" value="1" min="1" name="quantity"
                                                 style="max-width: 70px; height: 30px;">
                                         </div>

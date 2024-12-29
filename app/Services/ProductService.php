@@ -24,7 +24,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Session;
 
-class ProductService 
+class ProductService
 {
     /**
      * @var ProductRepository
@@ -52,7 +52,7 @@ class ProductService
      * @param ProductRepository $productRepository
      */
     public function __construct(
-        ProductRepository $productRepository, 
+        ProductRepository $productRepository,
         CategoryRepository $categoryRepository,
         BrandRepository $brandRepository,
         ColorRepository $colorRepository,
@@ -72,6 +72,23 @@ class ProductService
     public function index()
     {
         $list = $this->productRepository->all();
+        $list = $list->map(function ($product) {
+            $totalQuantity = 0;
+
+            // Duyệt qua các màu sắc của sản phẩm
+            foreach ($product->productColors as $productColor) {
+                // Duyệt qua các kích cỡ của mỗi màu sắc và cộng tổng quantity
+                foreach ($productColor->productSizes as $productSize) {
+                    $totalQuantity += $productSize->quantity;
+                }
+            }
+
+            // Thêm tổng quantity vào mỗi sản phẩm
+            $product->total_quantity = $totalQuantity;
+
+
+            return $product;
+        });
 
         $tableCrud = [
             'headers' => [
@@ -99,6 +116,10 @@ class ProductService
                     'text' => 'Giá',
                     'key' => 'price_sell',
                     'format' => true,
+                ],
+                [
+                    'text' => 'Số Lượng',
+                    'key' => 'total_quantity',
                 ],
             ],
             'actions' => [
@@ -452,7 +473,7 @@ class ProductService
         ->get();
 
         $productColors = ProductColor::where('product_id', $product->id)->get();
-        
+
         return [
             'title' => 'Kích thước sản phẩm',
             'routeColor' => route('admin.products_color', $product->id),
@@ -493,7 +514,7 @@ class ProductService
             'quantity' => $request->quantity,
         ]);
         Session::flash('success', 'Thêm kích thước thành công');
-        
+
         return response()->json([
             'status' => true,
             'route' => route('admin.products_size', $product->id),

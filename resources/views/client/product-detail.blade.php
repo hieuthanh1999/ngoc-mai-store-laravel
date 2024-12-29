@@ -274,7 +274,7 @@
                                     <form method="POST" action="{{ route('product_review.store', $product->id) }}">
                                         @csrf
                                         <div class="row">
-                                            @if ($checkReviewProduct)
+
                                                 <div class="col-md-6 col-sm-6">
                                                     <div class="form-row">
                                                         <label class="review-lable">
@@ -319,7 +319,6 @@
                                                         <input type="submit" value="Đánh Giá" class="button">
                                                     </div>
                                                 </div>
-                                            @endif
                                             <div class="col-md-6 col-sm-6">
                                                 <div class="form-row row">
                                                     <div class="col-md-5">

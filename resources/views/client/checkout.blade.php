@@ -125,10 +125,10 @@
                         <div class="info-order">
                           <div class="info__order-box">
                             <span>Tổng tiền sản phẩm</span>
-                            <span id="total-product">{{ format_number_to_money(Cart::getTotal()) }}</span>
+                            <span id="total-product">{{ format_number_to_money(Cart::getTotal()) }} VNĐ</span>
                           </div>
                         </div>
-                        <div class="info-order">
+                        {{-- <div class="info-order">
                           <div class="info__order-box">
                             <span>Phí vận chuyển</span>
                             <span id="fee">0</span>
@@ -139,13 +139,13 @@
                             <span>Áp dụng giảm giá</span>
                             <span>0</span>
                           </div>
-                        </div>
+                        </div> --}}
                         <div class="info-order">
                           <div class="info__order-box">
                             <span>Tổng đơn hàng</span>
                             <input id="total-order-input" value="{{ Cart::getTotal() }}" type="text" hidden>
                             <span id="total-order">
-                                {{ format_number_to_money(Cart::getTotal()) ?: 0 }}
+                                {{ format_number_to_money(Cart::getTotal()) ?: 0 }} VNĐ
                             </span>
                           </div>
                         </div>
@@ -162,7 +162,7 @@
                           <div class="payment-method-select">
                             <label for="{{ $payment->id }}" class="payment-method-select--check">
                               <div>
-                                <input type="radio" value="{{ $payment->id }}" name="payment_method" id="{{ $payment->id }}">
+                                <input type="radio" value="{{ $payment->id }}" name="payment_method" id="{{ $payment->id }}"  @if ($loop->first) checked @endif>
                                 <span class="label-momo">
                                   {{ $payment->name }}
                                 </span>

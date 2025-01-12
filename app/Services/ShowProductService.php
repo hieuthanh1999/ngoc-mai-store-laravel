@@ -65,6 +65,8 @@ class ShowProductService
 
         if (! $categorySlug && count($categories) > 0) {
             $categorySlug = $categories[0]->slug;
+        }else{
+            $categorySlug = $categoryParent->slug;
         }
 
         $filterBrand = $request->brand_id ?? null;

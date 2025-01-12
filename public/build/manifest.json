@@ -15,11 +15,11 @@
     "isEntry": true
   },
   "resources/admin/js/table-data.js": {
-    "file": "assets/table-data.83be78ae.js",
+    "file": "assets/table-data.845faed7.js",
     "src": "resources/admin/js/table-data.js",
     "isEntry": true,
     "imports": [
-      "_sweetalert2.esm.all.a0d56efc.js"
+      "_sweetalert2.esm.all.f85a58a1.js"
     ]
   },
   "resources/common/js/login.js": {
@@ -38,11 +38,11 @@
     "isEntry": true
   },
   "resources/admin/js/toast-message.js": {
-    "file": "assets/toast-message.34039841.js",
+    "file": "assets/toast-message.21bee2a1.js",
     "src": "resources/admin/js/toast-message.js",
     "isEntry": true,
     "imports": [
-      "_sweetalert2.esm.all.a0d56efc.js"
+      "_sweetalert2.esm.all.f85a58a1.js"
     ]
   },
   "resources/admin/js/product.js": {
@@ -71,19 +71,19 @@
     "isEntry": true
   },
   "resources/admin/js/product-color.js": {
-    "file": "assets/product-color.15d99ac2.js",
+    "file": "assets/product-color.c5af650b.js",
     "src": "resources/admin/js/product-color.js",
     "isEntry": true,
     "imports": [
-      "_sweetalert2.esm.all.a0d56efc.js"
+      "_sweetalert2.esm.all.f85a58a1.js"
     ]
   },
   "resources/admin/js/size.js": {
-    "file": "assets/size.a19b176b.js",
+    "file": "assets/size.3657ba0e.js",
     "src": "resources/admin/js/size.js",
     "isEntry": true,
     "imports": [
-      "_sweetalert2.esm.all.a0d56efc.js"
+      "_sweetalert2.esm.all.f85a58a1.js"
     ]
   },
   "resources/admin/js/edit-product.js": {
@@ -101,12 +101,27 @@
     "src": "resources/client/js/profile.js",
     "isEntry": true
   },
-  "_sweetalert2.esm.all.a0d56efc.js": {
-    "file": "assets/sweetalert2.esm.all.a0d56efc.js"
+  "_sweetalert2.esm.all.f85a58a1.js": {
+    "file": "assets/sweetalert2.esm.all.f85a58a1.js"
   },
   "resources/css/app.css": {
     "file": "assets/app.8b80c0f9.css",
     "src": "resources/css/app.css",
+    "isEntry": true
+  },
+  "resources/common/css/form.css": {
+    "file": "assets/form.71cf2f43.css",
+    "src": "resources/common/css/form.css",
+    "isEntry": true
+  },
+  "resources/client/css/checkout.css": {
+    "file": "assets/checkout.9fcacbf2.css",
+    "src": "resources/client/css/checkout.css",
+    "isEntry": true
+  },
+  "resources/admin/css/product.css": {
+    "file": "assets/product.09323e57.css",
+    "src": "resources/admin/css/product.css",
     "isEntry": true
   },
   "resources/common/css/loading.css": {
@@ -119,24 +134,9 @@
     "src": "resources/client/css/search.css",
     "isEntry": true
   },
-  "resources/common/css/form.css": {
-    "file": "assets/form.71cf2f43.css",
-    "src": "resources/common/css/form.css",
-    "isEntry": true
-  },
-  "resources/admin/css/product.css": {
-    "file": "assets/product.09323e57.css",
-    "src": "resources/admin/css/product.css",
-    "isEntry": true
-  },
-  "resources/client/css/product-detail.css": {
-    "file": "assets/product-detail.165a70a3.css",
-    "src": "resources/client/css/product-detail.css",
-    "isEntry": true
-  },
-  "resources/client/css/checkout.css": {
-    "file": "assets/checkout.9fcacbf2.css",
-    "src": "resources/client/css/checkout.css",
+  "resources/admin/css/form-edit.css": {
+    "file": "assets/form-edit.6ce01dab.css",
+    "src": "resources/admin/css/form-edit.css",
     "isEntry": true
   },
   "resources/client/css/auth.css": {
@@ -144,13 +144,13 @@
     "src": "resources/client/css/auth.css",
     "isEntry": true
   },
-  "resources/admin/css/form-edit.css": {
-    "file": "assets/form-edit.6ce01dab.css",
-    "src": "resources/admin/css/form-edit.css",
+  "resources/client/css/product-detail.css": {
+    "file": "assets/product-detail.165a70a3.css",
+    "src": "resources/client/css/product-detail.css",
     "isEntry": true
   },
   "resources/client/css/cart.css": {
-    "file": "assets/cart.f9780f10.css",
+    "file": "assets/cart.b5db0e27.css",
     "src": "resources/client/css/cart.css",
     "isEntry": true
   },
